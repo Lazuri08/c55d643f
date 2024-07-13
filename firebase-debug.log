@@ -1,0 +1,102 @@
+[debug] [2024-07-12T08:47:11.673Z] ----------------------------------------------------------------------
+[debug] [2024-07-12T08:47:11.673Z] Command:       /Users/gorkemsari/.nvm/versions/node/v18.20.4/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-07-12T08:47:11.674Z] CLI Version:   13.8.1
+[debug] [2024-07-12T08:47:11.674Z] Platform:      darwin
+[debug] [2024-07-12T08:47:11.674Z] Node Version:  v18.20.4
+[debug] [2024-07-12T08:47:11.679Z] Time:          Fri Jul 12 2024 04:47:11 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-07-12T08:47:11.679Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-12T08:47:11.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-12T08:47:11.712Z] > authorizing via signed-in user (gorkemsari08@gmail.com)
+[debug] [2024-07-12T08:47:11.712Z] [iam] checking project aircall-reactjs-app for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-12T08:47:11.713Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions [none]
+[debug] [2024-07-12T08:47:11.713Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions x-goog-quota-user=projects/aircall-reactjs-app
+[debug] [2024-07-12T08:47:11.713Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-12T08:47:12.039Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions 200
+[debug] [2024-07-12T08:47:12.039Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-12T08:47:12.040Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-07-12T08:47:12.040Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-07-12T08:47:12.308Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2024-07-12T08:47:12.309Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2024-07-12T08:47:12.309Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2024-07-12T08:47:12.310Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app [none]
+[debug] [2024-07-12T08:47:12.780Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app 200
+[debug] [2024-07-12T08:47:12.780Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app {"projectId":"aircall-reactjs-app","projectNumber":"599381448598","displayName":"Aircall-ReactJs-App","name":"projects/aircall-reactjs-app","resources":{"hostingSite":"aircall-reactjs-app"},"state":"ACTIVE","etag":"1_dea6806b-9d41-4774-be08-d9885acdd6cb"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-12T08:47:15.785Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app [none]
+[debug] [2024-07-12T08:47:16.165Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app 200
+[debug] [2024-07-12T08:47:16.165Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app {"name":"projects/aircall-reactjs-app/sites/aircall-reactjs-app","defaultUrl":"https://aircall-reactjs-app.web.app","type":"DEFAULT_SITE"}
+[info] 
+
+[info] > Build error occurred
+
+[info] Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
+    at findPagesDir (/Users/gorkemsari/node_modules/next/dist/lib/find-pages-dir.js:42:15)
+    at /Users/gorkemsari/node_modules/next/dist/build/index.js:404:73
+    at async Span.traceAsyncFn (/Users/gorkemsari/node_modules/next/dist/trace/trace.js:154:20)
+    at async build (/Users/gorkemsari/node_modules/next/dist/build/index.js:366:9)
+
+[debug] [2024-07-12T08:47:17.854Z] Error: ENOENT: no such file or directory, open '/Users/gorkemsari/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-07-12T09:02:43.910Z] ----------------------------------------------------------------------
+[debug] [2024-07-12T09:02:43.910Z] Command:       /Users/gorkemsari/.nvm/versions/node/v18.20.4/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-07-12T09:02:43.911Z] CLI Version:   13.8.1
+[debug] [2024-07-12T09:02:43.911Z] Platform:      darwin
+[debug] [2024-07-12T09:02:43.911Z] Node Version:  v18.20.4
+[debug] [2024-07-12T09:02:43.916Z] Time:          Fri Jul 12 2024 05:02:43 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-07-12T09:02:43.916Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-12T09:02:43.960Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-12T09:02:43.960Z] > authorizing via signed-in user (gorkemsari08@gmail.com)
+[debug] [2024-07-12T09:02:43.961Z] [iam] checking project aircall-reactjs-app for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-12T09:02:43.962Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions [none]
+[debug] [2024-07-12T09:02:43.962Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions x-goog-quota-user=projects/aircall-reactjs-app
+[debug] [2024-07-12T09:02:43.962Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-12T09:02:44.297Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions 200
+[debug] [2024-07-12T09:02:44.297Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aircall-reactjs-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-12T09:02:44.298Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-07-12T09:02:44.298Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-07-12T09:02:44.571Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2024-07-12T09:02:44.571Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/aircall-reactjs-app/serviceAccounts/aircall-reactjs-app@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2024-07-12T09:02:44.572Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2024-07-12T09:02:44.574Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app [none]
+[debug] [2024-07-12T09:02:45.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app 200
+[debug] [2024-07-12T09:02:45.018Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aircall-reactjs-app {"projectId":"aircall-reactjs-app","projectNumber":"599381448598","displayName":"Aircall-ReactJs-App","name":"projects/aircall-reactjs-app","resources":{"hostingSite":"aircall-reactjs-app"},"state":"ACTIVE","etag":"1_dea6806b-9d41-4774-be08-d9885acdd6cb"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-12T09:02:47.944Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app [none]
+[debug] [2024-07-12T09:02:48.302Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app 200
+[debug] [2024-07-12T09:02:48.302Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aircall-reactjs-app/sites/aircall-reactjs-app {"name":"projects/aircall-reactjs-app/sites/aircall-reactjs-app","defaultUrl":"https://aircall-reactjs-app.web.app","type":"DEFAULT_SITE"}
+[info] 
+
+[info] > Build error occurred
+
+[info] Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
+    at findPagesDir (/Users/gorkemsari/node_modules/next/dist/lib/find-pages-dir.js:42:15)
+    at /Users/gorkemsari/node_modules/next/dist/build/index.js:404:73
+    at async Span.traceAsyncFn (/Users/gorkemsari/node_modules/next/dist/trace/trace.js:154:20)
+    at async build (/Users/gorkemsari/node_modules/next/dist/build/index.js:366:9)
+
+[debug] [2024-07-12T09:02:49.021Z] Error: ENOENT: no such file or directory, open '/Users/gorkemsari/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.

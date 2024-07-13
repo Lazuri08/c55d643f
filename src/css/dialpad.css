@@ -1,0 +1,57 @@
+.dialpad-page {
+    padding: 20px;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .dialpad-display input {
+    width: 90%;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dialpad-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    color: rgb(18, 15, 15);
+
+  }
+  
+  .dialpad-buttons button {
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    color: rgb(18, 15, 15);
+
+  }
+  
+  .dialpad-buttons button:active {
+    background-color: rgb(15, 2, 2);
+    color: rgb(18, 15, 15);
+
+  }
+  
+  .dialpad-clear {
+    grid-column: span 2;
+    color: rgb(18, 15, 15);
+
+  }
+  
+  .dialpad-call {
+    grid-column: span 1;
+    background-color: #4caf50;
+    color: rgb(18, 15, 15);
+  }
+  
