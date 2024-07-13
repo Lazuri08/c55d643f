@@ -77,6 +77,13 @@ This project is a small ReactJS app designed as a coding test for Aircall. The a
 npm start
 This will start the development server and open the application in your default web browser. The app will be running at http://localhost:8080.
 
+### IMPORTANT
+If you are facing an issue with running you have to update the package.json file.
+Remove this code from both start and build "NODE_OPTIONS=--openssl-legacy-provide"
+Then try npm start one more time so you can run the app on your localhost.
+Provided code is neceserry in order to deploy.
+
+
 Building the App
 To build the application for production:
 
