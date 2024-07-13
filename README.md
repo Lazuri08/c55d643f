@@ -1,6 +1,6 @@
 
 
-# ScreenShots
+# Screenshots
 
 
 ![Alt text](screenShots/Inbox.png)
