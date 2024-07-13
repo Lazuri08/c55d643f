@@ -31,22 +31,24 @@ const App = () => {
   }, [calls]);
 
   const fetchCalls = async () => {
+
     try {
-      const calls = [
-      {"direction":"inbound","from":1,"to":2,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685a0df24a7a79ae0c50f8f","created_at":"2024-07-03T19:05:03.506Z"},
-      {"direction":"outbound","from":2,"to":1,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685b79524326ad725d48041","created_at":"2024-07-03T20:41:57.436Z"}
+      const response = await getActivities();
+
+      const calls = response.data;
+        
+      // {"direction":"inbound","from":1,"to":2,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685a0df24a7a79ae0c50f8f","created_at":"2024-07-03T19:05:03.506Z"},
+      // {"direction":"outbound","from":2,"to":1,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685b79524326ad725d48041","created_at":"2024-07-03T20:41:57.436Z"}
       // {"direction":"outbound","from":1,"to":2,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685a0df24a7a79ae0c50f84","created_at":"2024-09-04T19:05:03.506Z"},
       // {"direction":"inbound","from":2,"to":1,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685b79524326ad725d48042","created_at":"2024-10-03T20:41:57.436Z"},// extra data to check if sorting and inbound-outbound icon works
       // {"direction":"outbound","from":1,"to":2,"via":1,"duration":0,"is_archived":false,"call_type":"answered","id":"6685a0df24a7a79ae0q50f84","created_at":"2024-07-03T19:06:03.506Z"},
-    ]
     
   const sortedCalls = calls.sort((a, b) => (a.created_at) - (b.created_at));
     console.log(sortedCalls);
     setCalls(sortedCalls);
 
-      // const response = await getActivities();
-      // console.log(JSON.stringify(response.data))
-      // setCalls(response.data);
+      console.log(JSON.stringify(response.data))
+      setCalls(response.data);
     } catch (error) {
       console.error('Error fetching calls:', error);
     }
