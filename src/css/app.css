@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #FDFDFD;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ nav {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: white;
   font-family: Georgia, serif;
   font-weight: bold;
 }
@@ -70,7 +70,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #525b96;
+  background-color: gray;
   color: white;
   border: none;
   padding: 10px;
@@ -79,7 +79,12 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
-button img.archive-icon {
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
+.archive-icon {
   width: 16px; /* Adjust size as needed */
   height: 16px; /* Adjust size as needed */
   margin-right: 8px; /* Add space between the icon and the text */
@@ -89,7 +94,7 @@ button svg {
 }
 
 button:hover {
-  background-color: #800711;
+  background-color: #078019;
 }
 .archive-all-button{
   display:inline-block;
@@ -106,6 +111,25 @@ button:hover {
   text-align:center;
   transition: all 0.2s;
 }
+.archive-all-container{
+  width: 100%;
+  display:flex;
+  padding:20px; 
+  border:1px solid #E8E8E8;
+  margin:0 0.3em 0.3em 0;
+  border-radius:20px;
+  box-sizing: border-box;
+  text-decoration:none;
+  /* font-family: Georgia, serif; */
+  /* font-weight:bold; */
+  color:#4D4D4D ;
+  background-color: white;
+  /* text-align:left; */
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.2s;
+  font-weight: bold;
+}
 
   .archive-all-button:hover{
     color:#000000;
@@ -118,11 +142,31 @@ ul {
   margin: 0; /* Ensure no extra margin */
 }
 
+.am-pm{
+  border: 1px solid #cdcccc;
+  border-radius: 5px;
+  padding: 3px;
+  color: #cdcccc;
+  font-weight: bold;
+
+}
+
 .activity-item {
   display: flex;
+  /* border:1px solid #E8E8E8; */
+  border-radius:20px;
+  /* margin-bottom: 30px; */
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 20px 0px 20px 20px;
+  /* border-bottom: 1px solid #ddd; */
+  background-color: white;
+}
+.activity-item-container{
+  border:1px solid #E8E8E8;
+  margin-bottom: 30px;
+  border-radius:20px;
+  /* border-bottom: 1px solid #ddd; */
+
 }
 
 .call-icon img {
@@ -130,6 +174,18 @@ ul {
   height: 24px; /* Set a fixed size for icons */
   margin-right: 10px; /* Add space between icon and details */
 }
+
+.menu-icon{
+  width: 24px; /* Set a fixed size for icons */
+  height: 24px; /* Set a fixed size for icons */
+  margin-right: 10px; /* Add space between icon and details */
+}
+
+.menu-div{
+  justify-content: flex-end;
+
+}
+
 
 .activity-item .call-details {
   flex: 1;
@@ -142,7 +198,9 @@ ul {
 .activity-item .call-time {
   margin-right: 5px;
 }
-
+.call-to{
+  color: #BBBBBB;
+}
 .activity-item .call-time {
   color: #999;
   margin-left: auto; /* Align to the right */
@@ -159,8 +217,8 @@ ul {
 }
 
 .date-separator {
+  color: #BBBBBB;
   text-align: center;
-  font-weight: bold;
   margin: 10px 0;
 }
 .bottom-navbar {
@@ -204,13 +262,12 @@ ul {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   font-family: Georgia, serif;
-
   border-top: 1px solid black;
 }
 
-.call-details-container h2 {
+/* .call-details-container h2 {
   margin-top: 0;
-}
+} */
 
 .call-details-item {
   padding: 10px 0;

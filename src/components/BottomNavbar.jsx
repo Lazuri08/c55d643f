@@ -10,22 +10,22 @@ const BottomNavbar = ({ callCount, onCallsIconClick, onContactsIconClick, onDial
   return (
     <div className="bottom-navbar">
       <Link to="/" className="nav-item" style={{ position: 'relative' }}>
-        <img src={callsIcon} alt="Calls" className="nav-icon" onClick={onCallsIconClick} />
+        <img src={callsIcon} alt="Calls" className="nav-icon"  />
         {callCount > 0 && (
           <span className="call-count-badge">{callCount}</span>
         )}
       </Link>
-      <Link to="/contacts" className="nav-item">
-        <img src={contactsIcon} alt="Contacts" className="nav-icon" onClick={onContactsIconClick} />
+      <Link to="/" className="nav-item">
+        <img src={contactsIcon} alt="Contacts" className="nav-icon"  />
       </Link>
-      <Link to="/dialpad" className="nav-item dialpad">
-        <img src={dialpadIcon} alt="Dialpad" className="nav-icon" onClick={onDialpadIconClick} />
+      <Link to="/" className="nav-item dialpad">
+        <img src={dialpadIcon} alt="Dialpad" className="nav-icon"  />
       </Link>
-      <Link to="/settings" className="nav-item">
-        <img src={settingsIcon} alt="Settings" className="nav-icon" onClick={onSettingsIconClick} />
+      <Link to="/" className="nav-item">
+        <img src={settingsIcon} alt="Settings" className="nav-icon"  />
       </Link>
-      <Link to="/voicemail" className="nav-item">
-        <img src={voicemailIcon} alt="Voicemail" className="nav-icon" onClick={onVoicemailIconClick} />
+      <Link to="" className="nav-item">
+        <img src={voicemailIcon} alt="Voicemail" className="nav-icon"  />
       </Link>
     </div>
   );

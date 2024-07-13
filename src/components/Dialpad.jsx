@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/dialpad.css'; 
 
 const Dialpad = () => {
   const [input, setInput] = useState('');

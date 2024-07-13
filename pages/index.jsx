@@ -5,7 +5,7 @@ import ActivityFeed from '../src/components/ActivityFeed.jsx';
 import Archive from '../src/components/Archive.jsx';
 import ActivityDetail from '../src/components/ActivityDetail.jsx';
 import CallDetails from '../src/components/CallDetails.jsx';
-import Contacts from '../src/components/Contacts.jsx';
+// import Contacts from '../src/components/Contacts.jsx';
 import Dialpad from '../src/components/Dialpad.jsx';
 import Settings from '../src/components/Settings.jsx';
 import Voicemail from '../src/components/Voicemail.jsx';
@@ -93,22 +93,23 @@ const App = () => {
   };
 
   const handleIconClick = (section) => {
-    if (section === 'contacts') {
-      setShowContacts(prevShowContacts => !prevShowContacts);
-    } else {
+  //   if (section === 'contacts') {
+  //     setShowContacts(prevShowContacts => !prevShowContacts);
+  //   } else {
       setActiveSection((prevSection) => (prevSection === section ? '' : section));
-      setShowContacts(false);
-    }
-  };
+  //     setShowContacts(false);
+    };
+  
 
   return (
     <Router>
       <div>
-        <Header />
-        {!showContacts && (
+        
           <>
             <nav className='nav'>
-              <Link to="/">Inbox</Link>
+                
+              {/* <Link to="/contacts"><Header /></Link> */}
+              <Link to="/">Inbox </Link>
               <Link to="/archive">Archived</Link>
             </nav>
             <Routes>
@@ -130,20 +131,19 @@ const App = () => {
               } />
               <Route path="/activity/:id" element={<ActivityDetail call={selectedCall} />} />
               <Route path="/dialpad" element={<Dialpad />} />
+              {/* <Route path="/contacts" element={<Contacts />} /> */}
             </Routes>
             {activeSection === 'callDetails' && <CallDetails calls={calls} />}
             {activeSection === 'settings' && <Settings />}
             {activeSection === 'voicemail' && <Voicemail />}
           </>
-        )}
-        {showContacts && <Contacts />}
-        <BottomNavbar
+                <BottomNavbar
           callCount={calls.length}
-          onCallsIconClick={() => handleIconClick('callDetails')}
-          onContactsIconClick={() => handleIconClick('contacts')}
-          onDialpadIconClick={() => handleIconClick('dialpad')}
-          onSettingsIconClick={() => handleIconClick('settings')}
-          onVoicemailIconClick={() => handleIconClick('voicemail')}
+          onCallsIconClick={() => {}}
+          onContactsIconClick={() => {} }
+          onDialpadIconClick={() => {}}
+          onSettingsIconClick={() => {}}
+          onVoicemailIconClick={() => {}}
         />
       </div>
     </Router>
