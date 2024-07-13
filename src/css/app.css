@@ -6,7 +6,7 @@ body {
   background-color: #FDFDFD;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
   overflow: hidden; /* Prevent scrolling */
 }
@@ -23,33 +23,84 @@ body {
   flex-direction: column; /* Use flexbox */
 }
 
-header {
-  /* background-color: #2ac420; */
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-nav {
+.nav {
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  align-items: center;
+  background-color: #e0e0e0; /* Adjust as per your design */
+  border-radius: 5px; /* For rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; /* Ensures rounded corners apply to child elements */
+  position:relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* White background for the icon part */
+  padding: 8px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border-radius: 40px; */
+  border-bottom-right-radius: 70px;
+}
+.left-container{
+  background-color: #e0e0e0;
+}
+
+.navbar-right {
+  height: 86px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0; /* Gray background for the links part */
+  padding: 10px 20px;
+  border-top-left-radius: 50px;
+  border:none ;
+}
+.right-container{
   background-color: white;
-  font-family: Georgia, serif;
-  font-weight: bold;
+
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+/* .empty{
+  width: 53px;
+  height: 50px;
+  background-color: black;
+} */
+
+.head {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Default text color */
+  font-size: 16px;
+  margin: 0 10px; /* Space between links */
+  position: relative;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  background-color: #ddd;
+.head:hover {
+  color: darkred; /* Hover color */
 }
+
+.head.active {
+  color: rgb(10, 112, 63); /* Active link color */
+}
+
+.head.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: red; /* Active link underline color */
+  position: absolute;
+  bottom: -5px; /* Adjust position if needed */
+  left: 0;
+  right: 0;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #a0a0a0; /* Color of the separator line */
+}
+
 .h2{
   border: 1px solid rgb(80, 78, 78);
   border-style: outset;
@@ -59,8 +110,8 @@ nav a:hover {
 
 .activity-feed, .archive {
   padding: 10px;
-  flex: 1; /* Allow content to grow and shrink */
-  overflow-y: auto; /* Enable vertical scrolling */
+  flex: 1; 
+  /* overflow-y: auto;  */
   width: 100%; /* Ensure the width is consistent */
   box-sizing: border-box;
 
@@ -168,6 +219,13 @@ ul {
   /* border-bottom: 1px solid #ddd; */
 
 }
+.archived-title{
+  font-family: 'Times New Roman', Times, serif;
+  color: #078019;
+  border-bottom: 1px dotted green;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 .call-icon img {
   width: 24px; /* Set a fixed size for icons */
@@ -185,7 +243,13 @@ ul {
   justify-content: flex-end;
 
 }
-
+.activity-detail{
+  margin: 10px;
+  padding: 10px;
+  border: 1px gray solid;
+  border-radius: 20px;
+  color: #949191;
+}
 
 .activity-item .call-details {
   flex: 1;
@@ -220,6 +284,8 @@ ul {
   color: #BBBBBB;
   text-align: center;
   margin: 10px 0;
+  font-size: small;
+  font-weight: bold;
 }
 .bottom-navbar {
   display: flex;
@@ -229,7 +295,7 @@ ul {
   background-color: white;
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position:fixed;
   bottom: 0;
   left: 0;
   right: 0; /* Ensures it spans the entire width */
@@ -270,7 +336,7 @@ ul {
 } */
 
 .call-details-item {
-  padding: 10px 0;
+  padding: 10px ;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 .call-count-badge {

@@ -31,7 +31,7 @@ const ActivityFeed = ({ calls, onArchive, onArchiveAll, onSelectCall }) => {
   const renderCalls = () => {
     return Object.keys(groupedCalls).map(date => (
       <div key={date}>
-        <div className="date-separator">{moment(date).format('------------------------ MMMM, DD, YYYY ------------------------').toUpperCase()}</div>
+        <div className="date-separator">{moment(date).format('----------------- MMMM, DD, YYYY -----------------').toUpperCase()}</div>
         {groupedCalls[date].map(call => (
           <div className="activity-item-container"><div key={call.id} className="activity-item">
             <div className="call-icon">
@@ -57,13 +57,6 @@ const ActivityFeed = ({ calls, onArchive, onArchiveAll, onSelectCall }) => {
                  
             </div>
 
-            {/* {menuOpen && (
-                    <div>
-              <Link to={`/activity/${call.id}`} onClick={() => onSelectCall(call.id)}>
-                <button className="details-button">Details</button>
-              </Link>
-              <button className="archive-button" onClick={(e) => { e.stopPropagation(); onArchive(call.id); }}>Archive</button>
-              </div>)} */}
             </div>
             <div>{menuOpen && (
                     <div className="button-container">
@@ -83,11 +76,7 @@ const ActivityFeed = ({ calls, onArchive, onArchiveAll, onSelectCall }) => {
 
   return (
     <div className="activity-feed">
-      {/* <h2 className="h2">Activity Feed</h2> */}
-      {/* <button className="archive-all-button" onClick={onArchiveAll}>
-      <img src={archiveIcon} alt="Archive icon" className="archive-icon" />
-        Archive all calls
-      </button> */}
+      <h2 className="archived-title">Recent Calls</h2>
         <div className="archive-all-container" onClick={onArchiveAll}>
       <img src={archiveIcon} alt="Archive icon" className="archive-icon" />
         Archive all calls

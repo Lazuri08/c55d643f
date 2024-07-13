@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --open",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production" 
+
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

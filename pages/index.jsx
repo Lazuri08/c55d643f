@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { NavLink, BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ActivityFeed from '../src/components/ActivityFeed.jsx';
 import Archive from '../src/components/Archive.jsx';
 import ActivityDetail from '../src/components/ActivityDetail.jsx';
 import CallDetails from '../src/components/CallDetails.jsx';
-// import Contacts from '../src/components/Contacts.jsx';
+import Contacts from '../src/components/Contacts.jsx';
 import Dialpad from '../src/components/Dialpad.jsx';
 import Settings from '../src/components/Settings.jsx';
 import Voicemail from '../src/components/Voicemail.jsx';
@@ -19,12 +18,17 @@ const App = () => {
   const [calls, setCalls] = useState([]);
   const [selectedCall, setSelectedCall] = useState(null);
   const [activeSection, setActiveSection] = useState('');
-  const [showContacts, setShowContacts] = useState(false);
+  // const [showContacts, setShowContacts] = useState(false);
 
 
   useEffect(() => {
     fetchCalls();
   }, []);
+
+  useEffect(() => {
+    const callCount = calls.length;
+    document.title = callCount > 0 ? `(${callCount}) Aircalls Phone` : 'Aircalls Phone';
+  }, [calls]);
 
   const fetchCalls = async () => {
     try {
@@ -103,14 +107,19 @@ const App = () => {
 
   return (
     <Router>
-      <div>
-        
+      <div className="container">
           <>
-            <nav className='nav'>
-                
-              {/* <Link to="/contacts"><Header /></Link> */}
-              <Link to="/">Inbox </Link>
-              <Link to="/archive">Archived</Link>
+            <nav className='nav'>  
+            <div className="left-container"><div className="navbar-left">
+        <Header className="navbar-icon"/>
+        </div>
+      </div>
+      <div className="empty"></div>
+      <div className="right-container"><div className="navbar-right">
+        <NavLink exact className="head" activeClassName="active" to="/">Inbox</NavLink>
+        <div className="separator">/</div>
+        <NavLink className="head" activeClassName="active" to="/archive">Archived</NavLink>
+      </div></div>
             </nav>
             <Routes>
               <Route path="/" element={
@@ -145,6 +154,7 @@ const App = () => {
           onSettingsIconClick={() => {}}
           onVoicemailIconClick={() => {}}
         />
+        
       </div>
     </Router>
   );

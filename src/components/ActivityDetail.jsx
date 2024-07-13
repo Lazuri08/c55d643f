@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getActivityDetail } from '../api';
 
 const ActivityDetail = () => {
   const [activity, setActivity] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchActivityDetail();
@@ -22,14 +23,17 @@ const ActivityDetail = () => {
   if (!activity) return <div>Loading...</div>;
 
   return (
-    <div className="activity-detail">
-      <h2>Activity Detail</h2>
-      <p>From: {activity.from}</p>
-      <p>To: {activity.to}</p>
-      <p>Direction: {activity.direction}</p>
-      <p>Duration: {activity.duration} seconds</p>
-      <p>Call Type: {activity.call_type}</p>
-      <p>Archived: {activity.is_archived ? 'Yes' : 'No'}</p>
+    <div className="activity-feed">
+      <h2 className="archived-title">Activity Detail</h2>
+      <div className="activity-detail">
+        <p>From: {activity.from}</p>
+        <p>To: {activity.to}</p>
+        <p>Direction: {activity.direction}</p>
+        <p>Duration: {activity.duration} seconds</p>
+        <p>Call Type: {activity.call_type}</p>
+        <p>Archived: {activity.is_archived ? 'Yes' : 'No'}</p>
+        <button onClick={() => navigate('/')}>Back</button>
+      </div>
     </div>
   );
 };

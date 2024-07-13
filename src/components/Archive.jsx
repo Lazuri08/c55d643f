@@ -41,7 +41,7 @@ const Archive = ({ calls, onUnarchive, onUnarchiveAll, onSelectCall }) => {
   const renderCalls = () => {
     return Object.keys(groupedCalls).map(date => (
       <div key={date}>
-        <div className="date-separator">{moment(date).format('------------------------ MMMM, DD, YYYY ------------------------').toUpperCase()}</div>
+        <div className="date-separator">{moment(date).format('----------------- MMMM, DD, YYYY -----------------').toUpperCase()}</div>
         {groupedCalls[date].map(call => (
           <div className="activity-item-container"><div key={call.id} className="activity-item">
             <div className="call-icon">
@@ -92,7 +92,7 @@ const Archive = ({ calls, onUnarchive, onUnarchiveAll, onSelectCall }) => {
   };
   return (
     <div className="activity-feed">
-      <h2 className="">Archived Calls</h2>
+      <h2 className="archived-title">Archived Calls</h2>
       <div className="archive-all-container" onClick={onUnarchiveAll}>
       <img src={archiveIcon} alt="Archive icon" className="archive-icon" />
 

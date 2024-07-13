@@ -6,7 +6,8 @@ import dialpadIcon from '../assest/icons/dialpad.png';
 import settingsIcon from '../assest/icons/setting.png';
 import voicemailIcon from '../assest/icons/voice-mail.png';
 
-const BottomNavbar = ({ callCount, onCallsIconClick, onContactsIconClick, onDialpadIconClick, onSettingsIconClick, onVoicemailIconClick }) => {
+const BottomNavbar = ({ callCount}) => {
+  
   return (
     <div className="bottom-navbar">
       <Link to="/" className="nav-item" style={{ position: 'relative' }}>
