@@ -1,4 +1,3 @@
-/* Global styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,44 +5,43 @@ body {
   background-color: #FDFDFD;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
 
 .app {
   width: 100%;
   max-width: 400px;
-  height: 100vh; /* Ensure it fills the screen */
+  height: 100vh;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden; /* Prevent internal overflow */
+  overflow: hidden;
   display: flex;
-  flex-direction: column; /* Use flexbox */
+  flex-direction: column;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  background-color: #e0e0e0; /* Adjust as per your design */
-  border-radius: 5px; /* For rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; /* Ensures rounded corners apply to child elements */
-  position:relative;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  background-color: #ffffff; /* White background for the icon part */
+  background-color: #ffffff;
   padding: 8px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* border-radius: 40px; */
   border-bottom-right-radius: 70px;
 }
-.left-container{
+
+.left-container {
   background-color: #e0e0e0;
 }
 
@@ -52,69 +50,64 @@ body {
   width: 200px;
   display: flex;
   align-items: center;
-  background-color: #e0e0e0; /* Gray background for the links part */
+  background-color: #e0e0e0;
   padding: 10px 20px;
   border-top-left-radius: 50px;
-  border:none ;
+  border: none;
 }
-.right-container{
+
+.right-container {
   background-color: white;
-
 }
-
-/* .empty{
-  width: 53px;
-  height: 50px;
-  background-color: black;
-} */
 
 .head {
-  text-decoration: none; /* Remove underline */
-  color: black; /* Default text color */
+  text-decoration: none;
+  color: black;
   font-size: 16px;
-  margin: 0 10px; /* Space between links */
+  margin: 0 10px;
   position: relative;
   transition: color 0.3s;
 }
 
 .head:hover {
-  color: darkred; /* Hover color */
+  color: darkred;
 }
 
 .head.active {
-  color: rgb(10, 112, 63); /* Active link color */
+  color: rgb(10, 112, 63);
 }
 
 .head.active::after {
   content: '';
   display: block;
   height: 2px;
-  background: red; /* Active link underline color */
+  background: red;
   position: absolute;
-  bottom: -5px; /* Adjust position if needed */
+  bottom: -5px;
   left: 0;
   right: 0;
 }
 
 .separator {
   margin: 0 10px;
-  color: #a0a0a0; /* Color of the separator line */
+  color: #a0a0a0;
 }
 
-.h2{
+.h2 {
   border: 1px solid rgb(80, 78, 78);
   border-style: outset;
   border-radius: 10px;
   padding: 10px;
 }
 
-.activity-feed, .archive {
+.activity-feed,
+.archive {
   padding: 10px;
-  flex: 1; 
+  flex: 1;
   /* overflow-y: auto;  */
-  width: 100%; /* Ensure the width is consistent */
+  width: 100%;
+  /* Ensure the width is consistent */
   box-sizing: border-box;
-
 }
 
 button {
@@ -130,16 +123,19 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
-.button-container{
+
+.button-container {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
+
 .archive-icon {
-  width: 16px; /* Adjust size as needed */
-  height: 16px; /* Adjust size as needed */
-  margin-right: 8px; /* Add space between the icon and the text */
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
+
 button svg {
   margin-right: 5px;
 }
@@ -147,53 +143,51 @@ button svg {
 button:hover {
   background-color: #078019;
 }
-.archive-all-button{
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #1f0101;
-  margin:0 0.3em 0.3em 0;
-  border-radius:10px;
+
+.archive-all-button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #1f0101;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 10px;
   box-sizing: border-box;
-  text-decoration:none;
+  text-decoration: none;
   font-family: Georgia, serif;
-  /* font-weight:bold; */
-  color:#FFFFFF;
+  color: #FFFFFF;
   background-color: #8b8b8b;
-  text-align:center;
+  text-align: center;
   transition: all 0.2s;
 }
-.archive-all-container{
+
+.archive-all-container {
   width: 100%;
-  display:flex;
-  padding:20px; 
-  border:1px solid #E8E8E8;
-  margin:0 0.3em 0.3em 0;
-  border-radius:20px;
+  display: flex;
+  padding: 20px;
+  border: 1px solid #E8E8E8;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 20px;
   box-sizing: border-box;
-  text-decoration:none;
-  /* font-family: Georgia, serif; */
-  /* font-weight:bold; */
-  color:#4D4D4D ;
+  text-decoration: none;
+  color: #4D4D4D;
   background-color: white;
-  /* text-align:left; */
   align-items: center;
   justify-content: flex-start;
   transition: all 0.2s;
   font-weight: bold;
 }
 
-  .archive-all-button:hover{
-    color:#000000;
-    background-color:#FFFFFF;
-  }
+.archive-all-button:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
 
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0; /* Ensure no extra margin */
+  margin: 0;
 }
 
-.am-pm{
+.am-pm {
   border: 1px solid #cdcccc;
   border-radius: 5px;
   padding: 3px;
@@ -204,22 +198,19 @@ ul {
 
 .activity-item {
   display: flex;
-  /* border:1px solid #E8E8E8; */
-  border-radius:20px;
-  /* margin-bottom: 30px; */
+  border-radius: 20px;
   align-items: center;
   padding: 20px 0px 20px 20px;
-  /* border-bottom: 1px solid #ddd; */
   background-color: white;
 }
-.activity-item-container{
-  border:1px solid #E8E8E8;
-  margin-bottom: 30px;
-  border-radius:20px;
-  /* border-bottom: 1px solid #ddd; */
 
+.activity-item-container {
+  border: 1px solid #E8E8E8;
+  margin-bottom: 30px;
+  border-radius: 20px;
 }
-.archived-title{
+
+.archived-title {
   font-family: 'Times New Roman', Times, serif;
   color: #078019;
   border-bottom: 1px dotted green;
@@ -228,22 +219,23 @@ ul {
 }
 
 .call-icon img {
-  width: 24px; /* Set a fixed size for icons */
-  height: 24px; /* Set a fixed size for icons */
-  margin-right: 10px; /* Add space between icon and details */
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.menu-icon{
-  width: 24px; /* Set a fixed size for icons */
-  height: 24px; /* Set a fixed size for icons */
-  margin-right: 10px; /* Add space between icon and details */
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.menu-div{
+.menu-div {
   justify-content: flex-end;
 
 }
-.activity-detail{
+
+.activity-detail {
   margin: 10px;
   padding: 10px;
   border: 1px gray solid;
@@ -254,7 +246,7 @@ ul {
 .activity-item .call-details {
   flex: 1;
   display: flex;
-  align-items: center; /* Align text vertically center */
+  align-items: center;
 }
 
 .activity-item .call-from,
@@ -262,18 +254,20 @@ ul {
 .activity-item .call-time {
   margin-right: 5px;
 }
-.call-to{
+
+.call-to {
   color: #BBBBBB;
 }
+
 .activity-item .call-time {
   color: #999;
-  margin-left: auto; /* Align to the right */
+  margin-left: auto;
 }
 
 .activity-item .call-actions {
   display: flex;
   align-items: center;
-  margin-left: 10px; /* Add space between details and buttons */
+  margin-left: 10px;
 }
 
 .activity-item .details-button {
@@ -287,6 +281,7 @@ ul {
   font-size: small;
   font-weight: bold;
 }
+
 .bottom-navbar {
   display: flex;
   justify-content: space-around;
@@ -295,14 +290,15 @@ ul {
   background-color: white;
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  position:fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
-  right: 0; /* Ensures it spans the entire width */
+  right: 0;
   width: 100%;
   max-width: 400px;
-  margin: 0 auto; /* Center the navbar */
+  margin: 0 auto;
 }
+
 .bottom-navbar .nav-item {
   display: flex;
   justify-content: center;
@@ -322,7 +318,7 @@ ul {
   width: 48px;
   height: 48px;
 }
-/* Call details styles */
+
 .call-details-container {
   padding: 20px;
   border-radius: 20px;
@@ -331,14 +327,12 @@ ul {
   border-top: 1px solid black;
 }
 
-/* .call-details-container h2 {
-  margin-top: 0;
-} */
 
 .call-details-item {
-  padding: 10px ;
+  padding: 10px;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
+
 .call-count-badge {
   position: absolute;
   top: -5px;
@@ -353,12 +347,13 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
 .contacts-page {
   padding: 20px;
   background-color: white;
   flex: 1;
   overflow-y: auto;
-  max-height: calc(100vh - 100px); /* Adjust this value if needed */
+  max-height: calc(100vh - 100px);
 }
 
 .contacts-page h2 {
@@ -381,11 +376,10 @@ ul {
   color: #999;
 }
 
-/* Mobile styles */
 @media (max-width: 600px) {
   body {
     flex-direction: column;
-    height: 100%; /* Ensure it fills the screen */
+    height: 100%;
   }
 
   .app {

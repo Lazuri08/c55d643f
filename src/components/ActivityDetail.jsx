@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { getActivityDetail } from '../api';
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getActivityDetail } from "../api";
 
 const ActivityDetail = () => {
   const [activity, setActivity] = useState(null);
@@ -16,7 +16,7 @@ const ActivityDetail = () => {
       const response = await getActivityDetail(id);
       setActivity(response.data);
     } catch (error) {
-      console.error('Error fetching activity detail:', error);
+      console.error("Error fetching activity detail:", error);
     }
   };
 
@@ -31,8 +31,8 @@ const ActivityDetail = () => {
         <p>Direction: {activity.direction}</p>
         <p>Duration: {activity.duration} seconds</p>
         <p>Call Type: {activity.call_type}</p>
-        <p>Archived: {activity.is_archived ? 'Yes' : 'No'}</p>
-        <button onClick={() => navigate('/')}>Back</button>
+        <p>Archived: {activity.is_archived ? "Yes" : "No"}</p>
+        <button onClick={() => navigate("/")}>Back</button>
       </div>
     </div>
   );

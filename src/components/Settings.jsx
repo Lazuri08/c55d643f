@@ -1,4 +1,7 @@
-import React from 'react';
+// You can update this code for Setting Icon on the Bottom NavBar
+
+
+import React from "react";
 
 const Settings = () => {
   return (

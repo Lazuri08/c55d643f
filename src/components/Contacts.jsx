@@ -1,3 +1,7 @@
+//mock data
+// You can update this code for Contacts Icon on the Bottom NavBar
+
+
 // import React from 'react';
 
 // const contacts = [
@@ -40,8 +44,7 @@
 //     { name: 'Ivy Roberts', phone: '777-888-9900' },
 //     { name: 'Jack Stewart', phone: '888-999-1000' },
 //     { name: 'Kathy Turner', phone: '999-000-2000' }
-    
-    
+
 // ];
 // const Contacts = () => {
 //     return (
@@ -58,5 +61,5 @@
 //       </div>
 //     );
 //   };
-  
+
 //   export default Contacts;

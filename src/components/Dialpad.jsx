@@ -1,5 +1,8 @@
+// You can update this code for Dialpad Icon on the Bottom NavBar
+// code below displays actual dialpad
+
 // import React, { useState } from 'react';
-// import '../css/dialpad.css'; 
+// import '../css/dialpad.css';
 
 // const Dialpad = () => {
 //   const [input, setInput] = useState('');
