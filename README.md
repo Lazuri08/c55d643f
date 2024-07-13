@@ -14,6 +14,54 @@
 
 This project is a small ReactJS app designed as a coding test for Aircall. The application includes features for displaying call activities, viewing call details, archiving and unarchiving calls, and navigation between different sections.
 
+
+## Setup and Installation
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm (Node package manager)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd aircall-reactjs-webpack
+
+ 2. Install dependencies:
+
+   npm install
+ 
+ 3. Running the App
+  To run the application locally:
+
+npm start
+This will start the development server and open the application in your default web browser. The app will be running at http://localhost:8080.
+
+### IMPORTANT
+If you are facing an issue with running you have to update the package.json file.
+Remove this code from both start and build "NODE_OPTIONS=--openssl-legacy-provide"
+Then try npm start one more time so you can run the app on your localhost.
+Provided code is neceserry in order to deploy.
+
+
+### Building the App
+To build the application for production:
+
+  npm run build
+This will create a dist directory with the compiled files.
+
+  Usage
+View Activities: The main page shows the list of call activities.
+View Call Details: Click on a call activity to view its details.
+Archive Calls: Click on the "Archive" button next to a call to archive it.
+Unarchive Calls: Go to the "Archived" section and click on the "Unarchive" button next to a call to unarchive it.
+Archive/Unarchive All: Use the "Archive all calls" button to archive all calls, and the "Unarchive all calls" button in the "Archived" section to unarchive all calls.
+Navigation: Use the top navbar to navigate between "Inbox" and "Archived" sections.
+Customization
+Feel free to customize the styles and components to match your design preferences.
+
 ## Features
 
 - **Activity Feed**: Displays a list of call activities.
@@ -53,52 +101,6 @@ This project is a small ReactJS app designed as a coding test for Aircall. The a
 - **styles/**: Contains the CSS files for styling the application.
   - `app.css`: Main CSS file for the application.
 
-## Setup and Installation
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm (Node package manager)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd aircall-reactjs-webpack
-
- 2. Install dependencies:
-
-   npm install
- 
- 3. Running the App
-  To run the application locally:
-
-npm start
-This will start the development server and open the application in your default web browser. The app will be running at http://localhost:8080.
-
-### IMPORTANT
-If you are facing an issue with running you have to update the package.json file.
-Remove this code from both start and build "NODE_OPTIONS=--openssl-legacy-provide"
-Then try npm start one more time so you can run the app on your localhost.
-Provided code is neceserry in order to deploy.
-
-
-Building the App
-To build the application for production:
-
-npm run build
-This will create a dist directory with the compiled files.
-
-Usage
-View Activities: The main page shows the list of call activities.
-View Call Details: Click on a call activity to view its details.
-Archive Calls: Click on the "Archive" button next to a call to archive it.
-Unarchive Calls: Go to the "Archived" section and click on the "Unarchive" button next to a call to unarchive it.
-Archive/Unarchive All: Use the "Archive all calls" button to archive all calls, and the "Unarchive all calls" button in the "Archived" section to unarchive all calls.
-Navigation: Use the top navbar to navigate between "Inbox" and "Archived" sections.
-Customization
-Feel free to customize the styles and components to match your design preferences.
 
 Known Issues
 Ensure you have the correct version of Node.js and npm installed.
