@@ -80,7 +80,7 @@ const Archive = ({ calls, onUnarchive, onUnarchiveAll, onSelectCall }) => {
               <Link to={`/activity/${call.id}`} style={{ textDecoration: 'none' }} onClick={() => onSelectCall(call.id)}>
                 <button className="details-button">Details</button>
               </Link>
-              <button className="archive-button" onClick={(e) => { e.stopPropagation(); onArchive(call.id); }}>Archive</button>
+              <button className="archive-button" onClick={(e) => { e.stopPropagation(); onUnarchive(call.id); }}>Unarchive</button>
               </div>)}</div>
             </div>
           
