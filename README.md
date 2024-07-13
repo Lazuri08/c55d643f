@@ -6,8 +6,8 @@
 ![Alt text](screenShots/Archived.png)
 ![Alt text](screenShots/Details.png)
 
-
-
+# Assignment Deployed Here:
+- **Vercel**: https://c55d643f.vercel.app/
 
 # Aircall Activity Feed
 
